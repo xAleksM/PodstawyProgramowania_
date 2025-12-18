@@ -31,7 +31,7 @@ liczba = int(input('Podaj liczbę: '))
 while liczba > 0:
     cyfra = liczba % 10
     liczba = liczba // 10
-    print(cyfra, end = '')'''
+    print(cyfra, end = '')
 
 #Zadanie 8.
 
@@ -43,4 +43,47 @@ while liczba > 1:
         liczba = liczba // d
         ile_czyn += 1
     d += 1
-print(ile_czyn)
+print(ile_czyn)'''
+
+#Zadanie 5.
+from random import randint
+
+x, y = 0, 0
+ruchy = ['g', 'l', 'd', 'p'] * 10 + ['q']
+print(ruchy)
+
+while True:
+    ruch = ruchy[randint(0, len(ruchy) - 1)]
+
+    if ruch == 'q':
+        print('Koniec gry')
+        break
+
+    elif ruch == 'g':  # góra
+        if y < 9:
+            y += 1
+        else:
+            print('Ruch niemożliwy')
+
+    elif ruch == 'd':  # dół
+        if y > 0:
+            y -= 1
+        else:
+            print('Ruch niemożliwy')
+
+    elif ruch == 'p':  # prawo
+        if x < 9:
+            x += 1
+        else:
+            print('Ruch niemożliwy')
+
+    elif ruch == 'l':  # lewo
+        if x > 0:
+            x -= 1
+        else:
+            print('Ruch niemożliwy')
+
+    else:
+        print('Nieznany ruch')
+
+    print(f'({x}, {y})')
