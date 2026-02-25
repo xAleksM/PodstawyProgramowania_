@@ -1,0 +1,1 @@
+wjlgnwrbwsvnwjnavwbqjbjcljbwrjgca kutas pala jest po too zeby stala 69
